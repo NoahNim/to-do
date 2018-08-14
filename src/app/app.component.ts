@@ -13,10 +13,20 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
 
+  priorityColor(currentTask) {
+    if (currentTask === 3){
+      return "bg-danger";
+    } else if (currentTask.priority === 2) {
+      return "bg-warning"
+    } else {
+      return "bg-info";
+    }
+  }
+
   tasks: Task[] = [
-    new Task('Finish weekend Angular homework for Epicodus course'),
-    new Task('Begin brainstorming possible JavaScript group projects'),
-    new Task('Add README file to last few Angular repos on GitHub')
+    new Task('Finish weekend Angular homework for Epicodus course', 3),
+    new Task('Begin brainstorming possible JavaScript group projects', 2),
+    new Task('Add README file to last few Angular repos on GitHub', 2)
   ];
 
   editTask() {
