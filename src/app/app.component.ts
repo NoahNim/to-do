@@ -13,5 +13,13 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
 
-  firstTask: Task = new Task("Finish weekend Angular homework for Epicodus course")
+  tasks: Task[] = [
+    new Task('Finish weekend Angular homework for Epicodus course'),
+    new Task('Begin brainstorming possible JavaScript group projects'),
+    new Task('Add README file to last few Angular repos on GitHub')
+  ];
+
+  editTask() {
+    alert("Time to edit a task!");
+  }
 }
