@@ -1,6 +1,7 @@
 # ToDo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+A project made to teach the basics of Angular4
 
 ## Development server
 
